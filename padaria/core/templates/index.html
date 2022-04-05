@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aula Template</title>
+</head>
+<body>
+    <h1> Aula Template</h1>
+    <p>{{ nome }}</p>
+    {% for padaria in padarias %}
+        <p>{{padaria.nome}}, {{padaria.enderenco}}, {{padaria.telefone}}</p>
+    {% endfor %}
+
+ <!--   <form action="{% url "estoque" %}" method="post">
+        <label for="nome">YOUR NAME:</label>
+        <input id="nome" type="text" name="nome" value="">
+        <br> usando para pulara para proxima linha
+        <hr>
+        <input type="submit" value="Enviar">
+        </form> -->
+    <a href="{% url 'estoque' %}"> Novo produto </a> 
+    {% block conteudo %} {% endblock %}
+      
+</body>
+</html>

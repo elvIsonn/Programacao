@@ -1,0 +1,9 @@
+{% extends 'index.html' %}
+
+{% block conteudo %}
+    <h1> New produto</h1>
+    <form action="{% url "estoque" %}" method="post">
+        {% csrf_token %}
+    <p>{{ produto }}</p>
+    <input type="submit" value="Enviar">
+{% endblock  %}
